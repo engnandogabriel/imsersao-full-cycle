@@ -22,3 +22,5 @@ npm run dev
 - Os partners estão disponíveis na port 3000 e 3001
 - A API de vendas estão disponíveis na porta 8080
 - Os bancos estão disponíveis nas porta 3306 e 3307
+
+[![Home](C:\Users\nando\OneDrive\Área de Trabalho\full cycle\images\Captura de Tela (1).png "Home")](C:\Users\nando\OneDrive\Área de Trabalho\full cycle\images\Captura de Tela (1).png "Home")
