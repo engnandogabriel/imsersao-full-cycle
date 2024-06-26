@@ -23,4 +23,12 @@ npm run dev
 - A API de vendas estão disponíveis na porta 8080
 - Os bancos estão disponíveis nas porta 3306 e 3307
 
-![Home](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/home.png)
+#### Imagesn
+
+![Home](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/home.png "Home")
+
+![Spots](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/spots.png "Spots")
+
+![Checkout](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/checkout.png "Checkout")
+
+![Success](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/success.png "Success")
