@@ -25,7 +25,8 @@ npm run dev
 
 ### Observação
 * Para criar um novo evento, você deverá acessar a ``` http://localhost:8000/node/events ``` com metodo POST e passar os dados:
-```` {
+```` 
+{
   "name": "string - tamanho mínimo: 5",
   "location": "string",
   "organization": "string",
