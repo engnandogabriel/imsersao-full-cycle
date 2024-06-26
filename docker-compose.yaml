@@ -1,0 +1,8 @@
+networks:
+  full-cycle:
+    driver: bridge
+
+include:
+  - partner/docker-compose-partner.yaml
+  - sales-api/docker-compose-sales.yaml
+  - api-gateway/docker-compose.with-db.yaml

@@ -1,0 +1,48 @@
+services:
+  db-partners:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: partners
+    ports:
+      - "3307:3306"
+    volumes:
+      - db:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d
+
+  partner-app1:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-partners:3306/partner1
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SERVER_PORT=3000
+    ports:
+      - "3000:3000"
+    volumes:
+      - .m2:/root/.m2
+    container_name: partner-app1
+
+    depends_on:
+      - db-partners
+
+  partner-app2:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db-partners:3306/partner2
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SERVER_PORT=3001
+    ports:
+      - "3001:3001"
+    volumes:
+      - .m2:/root/.m2
+    container_name: partner-app2
+
+volumes:
+  db:

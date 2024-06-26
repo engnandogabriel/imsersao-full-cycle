@@ -1,0 +1,26 @@
+services:
+  db-node:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: sales
+    ports:
+      - '3306:3306'
+    volumes:
+      - db-node:/var/lib/mysql
+      - ./mysql-init:/docker-entrypoint-initdb.d
+
+  node-api:
+    build: .
+    command: 'npm run dev'
+    container_name: node-api
+    volumes:
+      - .:/usr/app
+    ports:
+      - '8080:8080'
+    depends_on:
+      - db-node
+
+volumes:
+  db-node:
