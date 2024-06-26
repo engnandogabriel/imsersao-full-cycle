@@ -23,6 +23,21 @@ npm run dev
 - A API de vendas estão disponíveis na porta 8080
 - Os bancos estão disponíveis nas porta 3306 e 3307
 
+### Observação
+* Para criar um novo evento, você deverá acessar a ``` http://localhost:8000/node/events ``` com metodo POST e passar os dados:
+```` {
+  "name": "string - tamanho mínimo: 5",
+  "location": "string",
+  "organization": "string",
+  "rating": "string - L, L10, L12, L14, L16, L18, ",
+  "date": "string - formato: AAAA-MM-AA",
+  "capacity": "number",
+  "imageURL": "string",
+  "price": "number",
+  "partnerID": number - 1 ou 2
+}
+````
+
 ### Imagens
 
 ![Home](https://github.com/engnandogabriel/imsersao-full-cycle/blob/main/images/home.png "Home")
